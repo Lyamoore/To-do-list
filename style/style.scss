@@ -1,0 +1,130 @@
+$colorBlue: rgba(83, 83, 211, 0.24);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.wrap {
+    width: 1000px;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.header {
+    text-align: center;
+    color: rgb(200, 83, 211);
+    margin-top: 15px;
+    font-weight: 700;
+    font-size: 48px;
+}
+
+.list {
+    margin-top: 30px;
+    min-height: 200px;
+    padding: 40px 40px 25px;
+    background-color: $colorBlue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 0px 5px 1px rgba(162, 144, 243, 0.219);
+
+    &__field {
+        border: none;
+        width: 700px;
+        padding: 5px 10px 6px;
+        height: 40px;
+        font-weight: 300;
+        font-size: 24px;
+        border-radius: 15px;
+        background-color: rgba(255, 255, 255, 0.747);
+    }
+
+    &__addBtn {
+        margin-top: 15px;
+        margin-bottom: 30px;
+        width: 250px;
+        height: 50px;
+        border: none;
+        color: white;
+        background-color: rgba(83, 83, 211, 0.39);
+        font-weight: 300;
+        font-size: 30px;
+        border-radius: 15px;
+
+        &:hover {
+            transition: 0.05s;
+            transform: scale(1.02, 1.02);
+        }
+
+        &:active {
+            background-color: rgba(83, 83, 211, 0.623);
+            transition: 0.1s;
+        }
+    }
+
+    &__tasks {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        &__task {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+
+            &__title {
+                width: 850px;
+                background-color: rgba(255, 255, 255, 0.747);
+                border: none;
+                padding: 6px 10px 7px;
+                border-radius: 10px;
+                margin-left: 5px;
+                margin-right: 7px;
+                font-weight: 400;
+                font-size: 24px;
+            }
+
+            &__btn {
+                width: 30px;
+                height: 30px; 
+                border: none;
+                background-color: transparent;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+
+
+                &:hover {
+                    border-radius: 50px;
+                }
+
+                &-del {
+                    background-image: url(../img/icon-basket.svg);
+
+                    &:hover {
+                        background-color: rgba(228, 135, 135, 0.507);
+                    }
+                }
+
+                &-check {
+                    background-image: url(../img/icon-check.svg);
+
+                    &:hover {
+                        background-color: rgba(135, 228, 135, 0.507);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.done {
+    color: rgb(83, 83, 83);
+    text-decoration: line-through;
+}
